@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const getAllDev = require('./routes/get-all-developers');
-const getADev = require('./routes/get-a-developer');
+
 
 const port = process.env.PORT || 7000;
 const app = express();
