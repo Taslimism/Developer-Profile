@@ -7,7 +7,7 @@ const getAllDev = require('./routes/get-all-developers');
 const port = process.env.PORT || 7000;
 const app = express();
 
-app.use('api/developers', express.static('static'));
+app.use(express.static('static'));
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
