@@ -9,6 +9,13 @@ const app = express();
 
 app.use('api/developers', express.static('static'));
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "*");
+    res.setHeader("Access-Control-Allow-Methods", "*");
+    next();
+});
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
