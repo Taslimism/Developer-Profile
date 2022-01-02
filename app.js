@@ -8,6 +8,9 @@ const port = process.env.PORT || 7000;
 const app = express();
 
 app.use(express.static('static'));
+app.use((req, res, next) => {
+    res.sendFile(path.resolve('static', 'index.html'));
+})
 
 
 
